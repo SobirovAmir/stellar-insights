@@ -4,38 +4,43 @@ import "./Resources.css";
 const Resources = () => {
   return (
     <div className="resources-container">
-     <section className="additional-section">
-      <h1 className="resources-title">Manbalar</h1>
-      <p className="resources-intro">
-        Bilimingizni oshirish va hududlar haqida ko&apos;proq ma&apos;lumot olish uchun foydali materiallar, vositalar va havolalarni o&apos;rganing.
-      </p>
+      {/* Заголовок секции */}
+      <section className="additional-section">
+        <h1 className="resources-title">Resources</h1>
+        <p className="resources-intro">
+          Explore useful materials, tools, and links to enhance your knowledge 
+          of astronomical image processing and gain deeper insights into the cosmos.
+        </p>
       </section>
 
+      {/* Список ресурсов */}
       <div className="resources-list">
         <ul>
           <li className="resource-item">
             <Link to="/resources/glossary" className="resource-link">
-              Glossariy
+              Glossary
             </Link>
           </li>
           <li className="resource-item">
             <Link to="/resources/videos" className="resource-link">
-              Video Materiallar
+              Video Tutorials
             </Link>
           </li>
           <li className="resource-item">
             <Link to="/resources/tools" className="resource-link">
-              Vositalar va Havolalar
+              Tools & Links
             </Link>
           </li>
         </ul>
       </div>
 
+      {/* Объяснение ценности ресурсов */}
       <section className="additional-section">
-        <h2>Nima uchun ushbu manbalardan foydalanish kerak?</h2>
+        <h2>Why Use These Resources?</h2>
         <p>
-          Ushbu materiallar keng qamrovli bilim va ko&apos;rsatmalarni taqdim etadi. 
-          Boshlovchi bo&apos;lasizmi yoki tajribali mutaxassis, o&apos;z mahoratingizni oshirish uchun foydali ma&apos;lumotlarni topasiz.
+          These materials provide comprehensive knowledge and practical guidance.
+          Whether you are a beginner or an experienced researcher, you will find 
+          valuable information to enhance your skills in astronomical image processing.
         </p>
       </section>
     </div>

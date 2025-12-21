@@ -3,112 +3,204 @@
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	padding: 0 10px;
-	height: 60px; /* Увеличим высоту для лучшего восприятия */
-	background: linear-gradient(90deg, #000428, #004e92); /* Космический градиент */
-	box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
-	border-bottom: 1px solid #00aaff;
+	padding: 0 15px;
+	height: 50px;
+	/* Чуть выше для более внушительного вида */
+	background: linear-gradient(90deg, #0b0c1f, #1b2735, #000000);
+	/* Космический градиент */
+	box-shadow: 0 4px 12px rgba(0, 0, 0, 0.7);
+	border-bottom: 1px solid #00ffff;
+	/* Акцент звёздного света */
 	position: relative;
 	z-index: 100;
-  }
-  
-  /* Logo Styles */
-  .logo-container {
+}
+
+/* Logo Styles */
+.logo-container {
 	display: flex;
 	align-items: center;
-  }
-  
-  .logo {
+}
+
+.logo {
 	display: flex;
 	align-items: center;
 	text-decoration: none;
-  }
-  
-  .logo img {
+}
+
+.logo img {
 	width: 50px;
 	height: 50px;
-	margin-right: 10px;
-  }
-  
-  .logo-text {
-	font-size: 1.6rem;
+	margin-right: 12px;
+	filter: drop-shadow(0 0 6px #00ffff);
+	/* Эффект свечения */
+}
+
+.logo-text {
+	font-size: 1.4rem;
 	color: #ffffff;
 	font-weight: bold;
-	letter-spacing: 1px;
+	letter-spacing: 1.2px;
 	text-transform: uppercase;
-	animation: fadeIn 2s ease-in-out; /* Плавное появление текста */
-  }
-  
-  /* Navigation Styles */
-  .nav {
+	text-shadow: 0 0 6px #00ffff, 0 0 12px #1e90ff;
+	/* "звёздное сияние" */
+	animation: fadeIn 2s ease-in-out;
+}
+
+/* Navigation Styles */
+.nav {
 	display: flex;
-	gap: 1.5rem;
-  }
-  
-  .nav-link {
+	gap: 1.8rem;
+}
+
+.nav-link {
 	text-decoration: none;
 	color: #ffffff;
-	font-size: 1.1rem;
+	font-size: 1.15rem;
 	font-weight: 500;
 	padding: 0.5rem 1rem;
-	border-radius: 8px;
+	border-radius: 10px;
 	position: relative;
 	transition: color 0.3s ease, transform 0.3s ease;
-  }
-  
-  .nav-link::after {
+}
+
+.nav-link::after {
 	content: "";
 	position: absolute;
 	bottom: 0;
 	left: 0;
 	width: 100%;
 	height: 2px;
-	background-color: #00aaff;
+	background-color: #00ffff;
 	transform: scaleX(0);
 	transform-origin: bottom right;
 	transition: transform 0.3s ease-in-out;
-  }
-  
-  .nav-link:hover {
-	color: #00aaff;
+}
+
+.nav-link:hover {
+	color: #00ffff;
 	transform: translateY(-3px);
-  }
-  
-  
-  /* Active Link Style */
-  .active-link {
-	color: #00aaff;
-	border-bottom: 2px solid #00aaff;
-  }
-  
-  @media (max-width: 768px) {
-	.nav {
-	  display: none; /* Hide the original navigation links */
-	}
-  
-	.burger-menu {
-	  display: block !important; /* Display the burger menu */
-	}
-  }
-  
-  /* Burger Menu */
-  .burger-menu {
+}
+
+.active-link {
+	color: #00ffff;
+	border-bottom: 2px solid #00ffff;
+}
+
+/* Burger Menu */
+.burger-menu {
 	display: none;
 	cursor: pointer;
 	z-index: 10;
 	margin-right: 10px;
-  }
-  
-  .burger-bar {
+}
+
+.burger-bar {
+	width: 30px;
+	height: 3px;
+	margin: 6px 0;
+	background-color: #00ffff;
+	transition: 0.4s;
+}
+
+/* Sidebar */
+.sidebar {
+	position: fixed;
+	top: 0;
+	right: -260px;
+	width: 260px;
+	height: 100%;
+	background: #0b1b33;
+	/* Тёмный космос */
+	padding-top: 70px;
+	transition: 0.3s;
+	box-shadow: 2px 0px 8px rgba(0, 0, 0, 0.5);
+	z-index: 99;
+}
+
+.sidebar.show {
+	right: 0;
+}
+
+.sidebar a {
+	padding: 10px 12px 10px 32px;
+	text-decoration: none;
+	font-size: 1.3rem;
+	color: white;
+	display: block;
+	transition: 0.3s;
+}
+
+.sidebar a:hover {
+	background-color: #1c2e4a;
+}
+
+.sidebar .close-btn {
+	position: absolute;
+	top: 15px;
+	right: 15px;
+	font-size: 2rem;
+	color: #00ffff;
+	cursor: pointer;
+}
+
+.backdrop {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(0, 0, 0, 0.6);
+	display: none;
+	z-index: 9;
+}
+
+.sidebar.show+.backdrop {
+	display: block;
+}
+
+/* Fade-in Animation for Logo Text */
+@keyframes fadeIn {
+	0% {
+		opacity: 0;
+		transform: translateY(-10px);
+	}
+
+	100% {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+@media (max-width: 768px) {
+	.nav {
+		display: none;
+		/* Hide the original navigation links */
+	}
+
+	.burger-menu {
+		display: block !important;
+		/* Display the burger menu */
+	}
+}
+
+/* Burger Menu */
+.burger-menu {
+	display: none;
+	cursor: pointer;
+	z-index: 10;
+	margin-right: 10px;
+}
+
+.burger-bar {
 	width: 30px;
 	height: 3px;
 	margin: 6px 0;
 	background-color: white;
 	transition: 0.4s;
-  }
-  
-  /* Sidebar */
-  .sidebar {
+}
+
+/* Sidebar */
+.sidebar {
 	position: fixed;
 	top: 0;
 	right: -250px;
@@ -119,35 +211,35 @@
 	transition: 0.3s;
 	box-shadow: 2px 0px 5px rgba(0, 0, 0, 0.3);
 	z-index: 99;
-  }
-  
-  .sidebar.show {
+}
+
+.sidebar.show {
 	right: 0;
-  }
-  
-  .sidebar a {
+}
+
+.sidebar a {
 	padding: 8px 8px 8px 32px;
 	text-decoration: none;
 	font-size: 1.25rem;
 	color: white;
 	display: block;
 	transition: 0.3s;
-  }
-  
-  .sidebar a:hover {
+}
+
+.sidebar a:hover {
 	background-color: #575757;
-  }
-  
-  .sidebar .close-btn {
+}
+
+.sidebar .close-btn {
 	position: absolute;
 	top: 15px;
 	right: 15px;
 	font-size: 2rem;
 	color: #fff;
 	cursor: pointer;
-  }
-  
-  .backdrop {
+}
+
+.backdrop {
 	position: fixed;
 	top: 0;
 	left: 0;
@@ -156,10 +248,9 @@
 	background: rgba(0, 0, 0, 0.5);
 	display: none;
 	z-index: 9;
-  }
-  
-  /* Show the backdrop when sidebar is active */
-  .sidebar.show + .backdrop {
+}
+
+/* Show the backdrop when sidebar is active */
+.sidebar.show+.backdrop {
 	display: block;
-  }
-  
+}

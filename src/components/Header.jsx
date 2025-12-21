@@ -6,10 +6,10 @@ const Header = () => {
   const [isSidebarOpen, setSidebarOpen] = useState(false);
 
   const navLinks = [
-    { path: "/", label: "Bosh sahifa  " },
-    { path: "/materials", label: "Ma'ruzalar" },
-    { path: "/tests", label: "Testlar" },
-    { path: "/resources", label: "Manbalar" },
+    { path: "/", label: "Home" },
+    { path: "/materials", label: "Lectures" },
+    { path: "/tests", label: "Tests" },
+    { path: "/resources", label: "Resources" },
   ];
 
   const toggleSidebar = () => {
@@ -25,7 +25,7 @@ const Header = () => {
       <div className="logo-container">
         <NavLink to="/" className="logo">
           <img src="/Logo.png" alt="Logo" />
-          <span className="logo-text">O&apos;lkashunoslik</span>
+          <span className="logo-text">Stellar Insights</span>
         </NavLink>
       </div>
       <nav className="nav">

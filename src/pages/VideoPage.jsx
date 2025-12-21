@@ -7,28 +7,36 @@ const VideoPage = () => {
   // Видеоматериалы по теме "O'lkashunoslik"
   const videos = [
     {
-      title: "Samarqand viloyat O'lkashunoslik muzeyi",
-      embedId: "L9LbbGkyZWk",
+      title: "Information field theory: from astronomical imaging to artificial intelligence",
+      embedId: "gfV4QBuziaE",
     },
-    { title: "O'lkashunoslik muzeyi 3", embedId: "6QuKBUxVjuk" },
-    { title: "O'lkashunoslik muzeyi", embedId: "Ge4Rajvw8jY" },
+    { title: "IRAF Tutorial Part 5: Cosmetic Corrections", embedId: "HWuVThbipKc" },
     {
-      title: "Buxoro viloyat O'lkashunoslik muzeyi",
-      embedId: "449412100509353",
-    },
-    {
-      title: "Tarixiy o'lkashunoslik va turizmning turlari",
-      embedId: "f6f1d2c79c2c5a92ce8448e51eee1244",
-    },
-    { title: "O'lkashunoslik burchagi", embedId: "Vp5i-Tdy3rM" },
-    {
-      title: "Ismatulla Akaboyev O'lkashunoslik muzeylari",
-      embedId: "UCYUT8yDjdmCO0kHE8S18JiA",
+      title: "Astrophotography Image Processing Workflow",
+      embedId: "-_YN4syEJ7Y", // правильный ID с дефисом
     },
     {
-      title: "Tarixiy o'lkashunoslik fanining predmeti",
-      embedId: "xkFiGXFRInkrhz6f83BZ7AHaKe",
+      title: "Astrophotography Made Easy — Final Processing",
+      embedId: "diYZ8dcEdto", // видео о том, как обработать астрофото
     },
+    { title: "Charge Coupled Device (CCD chip) | X-ray Physics | Radiology Physics Course #34", embedId: "E58CFlXhSUQ" },
+    {
+      title: "My 2021 Astrophotography Image Processing Tutorial!",
+      embedId: "ph-cpjqlv0Q",
+    },
+    {
+      title: "Siril 1.4 Beginner Tutorial: From Raw to Finished",
+      embedId: "KMED8_sWu5c",
+    },
+    {
+      title: "The Science of Deep Space Imaging | Featuring the James Webb Space Telescope",
+      embedId: "88ys9CsNW08",
+    },
+    {
+      title: "How Hubble Images Are Made",
+      embedId: "QGf0yzdM5OA",
+    },
+
   ];
 
   return (
@@ -36,15 +44,17 @@ const VideoPage = () => {
       <button className="back-button" onClick={() => navigate(-1)}>
         {" "}
         {/* Back button */}
-        &larr; Orqaga
+        &larr; Back
       </button>
-      <h1 className="page-title">
-        O&apos;lkashunoslik va Geografiya Video Materiallari
-      </h1>
-      <p>
-        O&apos;lkashunoslik, geografiya, tabiiy resurslar va iqlim haqida
-        o&lsquo;quv materiallarini tomosha qiling.
-      </p>
+      <div className="header-section">
+        <h1 className="page-title">
+          Astronomical Image Processing Video Materials
+        </h1>
+        <p className="page-description">
+          Watch educational content on astronomical imaging, image processing techniques, and celestial data analysis.
+        </p>
+      </div>
+
       <div className="video-list">
         {videos.map((video, index) => (
           <div className="video-item" key={index}>

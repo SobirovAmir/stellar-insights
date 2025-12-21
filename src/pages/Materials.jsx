@@ -1,19 +1,19 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import './Materials.css'; // Подключаем стили
+import './Materials.css';
 
 const Materials = () => {
-  const lessons = ['lesson1', 'lesson2', 'lesson3', 'lesson4', 'lesson5', 'lesson6', 'lesson7'];
+  const lessons = ['lesson1', 'lesson2', 'lesson3', 'lesson4', 'lesson5', 'lesson6', 'lesson7', "lesson8"];
 
   return (
     <div className="materials-container">
-      <h1 className="title">O&apos;lkashunoslik Darslari</h1>
+      <h1 className="title">Lectures</h1>
       <div className="lessons-grid">
         {lessons.map((lesson) => (
           <div key={lesson} className="lesson-card">
             <Link to={`/materials/${lesson}`} className="lesson-link">
               <div className="lesson-content">
-                <h2>{`Dars ${lesson.replace('lesson', '')}`}</h2>
+                <h2>{`Lecture ${lesson.replace('lesson', '')}`}</h2>
               </div>
             </Link>
           </div>

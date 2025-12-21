@@ -1,27 +1,24 @@
 /* Footer.css */
 .bottom-footer {
-  padding: 20px;
+  padding: 10px;
   color: white;
   font-size: 1rem;
   background: linear-gradient(
     90deg,
-    #000428,
-    #004e92
-  ); /* Космический градиент */
+    #0b0c1f,
+    #1b2735,
+    #000000
+  ); /* Космический градиент: темное звездное небо */
   text-align: center;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
-  border-top: 1px solid #00aaff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+  border-top: 1px solid #00ffff; /* Цвет акцента звезд */
   position: relative;
-  position: static;
-  bottom: 0;
-  right: 0;
   width: 100%;
 }
 
-
 .bottom-footer strong {
   font-weight: bold;
-  color: #00aaff; /* Цвет для выделения текста */
+  color: #00ffff; /* Цвет для выделения текста, как свет звезд */
 }
 
 .bottom-footer a {
@@ -31,7 +28,7 @@
 }
 
 .bottom-footer a:hover {
-  color: #00aaff; /* При наведении на ссылку — цвет изменяется */
+  color: #00ffff; /* При наведении на ссылку — светящийся акцент */
 }
 
 .bottom-footer .social-icons {
@@ -43,12 +40,13 @@
 
 .bottom-footer .social-icons a {
   font-size: 1.5rem;
-  transition: transform 0.3s ease, color 0.3s ease;
+  transition: transform 0.3s ease, color 0.3s ease, text-shadow 0.3s ease;
 }
 
 .bottom-footer .social-icons a:hover {
   transform: scale(1.2);
-  color: #00aaff;
+  color: #00ffff;
+  text-shadow: 0 0 6px #00ffff, 0 0 12px #1e90ff; /* Эффект свечения при наведении */
 }
 
 /* Responsive Design for Footer */

@@ -6,8 +6,8 @@ const Footer = () => {
 
   return (
     <footer className="bottom-footer">
-      <p>Muallif: <strong>Sabirova Nilufar Tairovna</strong></p>
-      <p>© {currentYear}. Barcha huquqlar himoyalangan.</p>
+      <p>Author: <strong>Zavkiddin Mirtoshev</strong></p>
+      <p>© {currentYear}. All right reserved.</p>
     </footer>
   );
 };

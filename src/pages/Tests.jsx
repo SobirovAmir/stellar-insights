@@ -14,33 +14,22 @@ const Tests = () => {
 
   return (
     <div className="tests-container">
-      <section className="additional-section">
-        <h1 className="hero-title">O&apos;lkashunoslik Testlari</h1>
-        <p className="hero-subtitle">
-          Hududlarning tabiati, ijtimoiy-iqtisodiy rivojlanishi va madaniy
-          boyliklarini o&apos;rganing!
-        </p>
-      </section>
-      
-      <div className="test-list">
-        <ul>
-          {testFiles.map((file, index) => {
-            const lessonId = file.replace(".txt", "");
-            return (
-              <li key={index} className="test-item">
-                <Link to={`/tests/${lessonId}`} className="test-link">
-                  Ma&apos;ruza {index + 1} Testi
-                </Link>
-              </li>
-            );
-          })}
-        </ul>
-      </div>
+      <h1 className="tests-title">TESTS
+      </h1>
 
-      {/* Footer Section */}
-      <footer className="test-footer">
-        <p>Yaxshi omad va ilmiy sayohat!</p>
-      </footer>
+      <ul className="test-list">
+        {testFiles.map((file, index) => {
+          const lessonId = file.replace(".txt", "");
+          return (
+            <li key={index} className="test-item">
+              <Link to={`/tests/${lessonId}`} className="test-link">
+                Test {index + 1}
+              </Link>
+            </li>
+          );
+        })}
+      </ul>
+
     </div>
   );
 };
