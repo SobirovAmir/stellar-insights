@@ -1,0 +1,25 @@
+?What are the two basic types of image sensors?
++ CCD and CMOS
+- MOS and BJT
+- LED and LCD
+- TFT and OLED
+?What is the primary difference between CCD and CMOS image sensors?
++ The readout mechanism: CCD shifts charge, CMOS uses row and column decoders
+- CCD uses CMOS decoders, CMOS shifts charge
+- CCD is analog only, CMOS is digital only
+- CMOS has higher noise than CCD
+?What is the basic unit of many CCD structures?
++ MOS capacitor
+- Photogate transistor
+- Pinned diode
+- CMOS transistor
+?Which of the following is NOT a type of CCD structure?
++ Random Access CCD
+- Interline Transfer CCD (IT-CCD)
+- Frame Transfer CCD (FT-CCD)
+- Backside-Illuminated CCD (BSI-CCD)
+?In CCD operation, what happens after photons generate charge in the pixels?
++ Charge packets are sequentially transferred to the output stage and converted into electrical signals
+- Charge packets remain in the pixel indefinitely
+- Photons are converted directly into digital values
+- Charge is transferred wirelessly to another sensor

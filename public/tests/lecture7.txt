@@ -1,0 +1,25 @@
+?What is the main purpose of GALFIT 3?
++ To perform 2D parametric modeling of galaxies’ surface brightness
+- To generate spectroscopic data for stars
+- To simulate telescope optics
+- To measure the chemical composition of galaxies
+?Which components can GALFIT 3 fit simultaneously in crowded fields?
++ Bulges, disks, bars, spiral arms, and neighboring galaxies
+- Only single isolated galaxies
+- Stars individually without considering galaxies
+- Planetary nebulae exclusively
+?What is the role of the PSF in GALFIT 3 fitting?
++ Convolves the model with observational point-spread effects
+- Removes cosmic rays from the image
+- Converts CCD data to spectral flux
+- Generates artificial stars in the image
+?What does a high Sérsic index (n ≈ 4) indicate about a galaxy?
++ Bulge-dominated morphology
+- Disk-dominated morphology
+- Galaxy with strong spiral arms
+- Galaxy with low surface brightness
+?What type of output files does GALFIT 3 produce?
++ Best-fit model image, residual image, and parameter file with uncertainties
+- Only a residual image
+- Only a log of PSF parameters
+- FITS images without model information

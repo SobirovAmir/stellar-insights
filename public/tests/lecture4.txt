@@ -1,0 +1,25 @@
+?What does IRAF stand for?
++ Image Reduction and Analysis Facility
+- International Research Astronomy Framework
+- Integrated Reduction and Analysis Function
+- Imaging and Radio Astronomy Facility
+?Into which two broad classes are IRAF application packages divided?
++ System packages and scientific reduction/analysis packages
+- Kernel packages and user interface packages
+- Core packages and peripheral packages
+- Linux packages and Windows packages
+?Which IRAF package contains utilities for software development and system maintenance?
++ softools
+- dbms
+- lists
+- plot
+?What is the primary function of the digiphot package in IRAF?
++ Performing aperture photometry and generating starlists
+- Creating artificial starfields and spectra
+- Correcting dispersion and flux in spectra
+- Detecting faint objects in galaxies
+?What is the role of third-party software in IRAF?
++ Provides additional tools that appear as a new branch on the IRAF package tree
+- Replaces the core IRAF system packages
+- Is incompatible with all IRAF hosts
+- Only deals with specific NOAO instruments

@@ -1,0 +1,25 @@
+?What is the main purpose of astronomical photometry?
++ To measure the flux or intensity of light from celestial objects
+- To determine the chemical composition of planets only
+- To create 3D models of galaxies
+- To calibrate telescope optics
+?Which instruments are commonly used for photometry?
++ CCD photometers and photoelectric photometers
+- Spectrophotometers exclusively
+- Only human eye observations
+- Radio antenna arrays
+?What is differential photometry?
++ Comparing the brightness of a target object with nearby stars using the same instrument
+- Measuring the total light of a galaxy per square arcsecond
+- Measuring only the brightest star in a field
+- Applying random filters to stars for observation
+?How is surface brightness typically expressed in astronomical photometry?
++ Magnitudes per square arcsecond
+- Luminosity in watts
+- Apparent magnitude only
+- Flux in photons per second
+?What does the B–V colour index indicate?
++ The temperature and colour of a star
+- The distance to a galaxy
+- The chemical composition of a star
+- The age of a star cluster

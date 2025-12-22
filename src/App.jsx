@@ -2,17 +2,18 @@ import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Header from './components/Header';
 import Footer from './components/Footer';
+
 import Home from './pages/Home';
 import Materials from './pages/Materials';
-import Tests from './pages/Tests';
-import TestPage from './pages/TestPage'; // Создайте компонент для отображения теста по уроку
+import Lesson from './pages/Lesson';
+import TestPage from './pages/TestPage';
+import SlidesPage from "./pages/SlidesPage";
+
 
 import Resources from './pages/Resources';
-import Lesson from "./pages/Lesson"; 
-
-import Glossary from "./pages/Glossary";
-import VideoPage from "./pages/VideoPage";
-import ToolsPage from "./pages/ToolsPage";
+import Glossary from './pages/Glossary';
+import VideoPage from './pages/VideoPage';
+import ToolsPage from './pages/ToolsPage';
 
 function App() {
   return (
@@ -20,12 +21,14 @@ function App() {
       <Header />
       <Routes>
         <Route path="/" element={<Home />} />
+
+        {/* Лекции */}
         <Route path="/materials" element={<Materials />} />
-        <Route path="/materials/:lessonId" element={<Lesson />} />
+        <Route path="/lecture/:lectureId" element={<Lesson />} />
+        <Route path="/lecture/:lectureId/test" element={<TestPage />} />
+        <Route path="/lecture/:lectureId/presentation" element={<SlidesPage />} />
 
-        <Route path="/tests" element={<Tests />} /> 
-        <Route path="/tests/:lessonId" element={<TestPage />} />
-
+        {/* Ресурсы */}
         <Route path="/resources" element={<Resources />} />
         <Route path="/resources/glossary" element={<Glossary />} />
         <Route path="/resources/videos" element={<VideoPage />} />
@@ -37,4 +40,3 @@ function App() {
 }
 
 export default App;
-

@@ -23,13 +23,6 @@ const Home = () => {
           </p>
         </Link>
 
-        <Link to="/tests" className="nav-card">
-          <h2>Tests</h2>
-          <p>
-            Interactive quizzes to assess your understanding of astronomical image processing concepts and techniques.
-          </p>
-        </Link>
-
         <Link to="/resources" className="nav-card">
           <h2>Resources</h2>
           <p>

@@ -1,0 +1,68 @@
+const lecturesConfig = [
+  {
+    id: 1,
+    title: "ASTRONOMICAL IMAGE PROCESSING",
+    theory: true,
+    slides: true,
+    video: false,
+    test: true,
+  },
+  {
+    id: 2,
+    title: "INTRODUCTION TO UNIX",
+    theory: true,
+    slides: true,
+    video: false,
+    test: true,
+  },
+  {
+    id: 3,
+    title: "Image Calibration",
+    theory: true,
+    slides: true,
+    video: false,
+    test: true,
+  },
+  {
+    id: 4,
+    title: "ASTRONOMICAL IMAGE PROCESSING",
+    theory: true,
+    slides: true,
+    video: false,
+    test: true,
+  },
+  {
+    id: 5,
+    title: "ASTRONOMICAL IMAGE PROCESSING",
+    theory: true,
+    slides: false,
+    video: false,
+    test: true,
+  },
+  {
+    id: 6,
+    title: "ASTRONOMICAL IMAGE PROCESSING",
+    theory: true,
+    slides: true,
+    video: false,
+    test: true,
+  },
+  {
+    id: 7,
+    title: "ASTRONOMICAL IMAGE PROCESSING",
+    theory: true,
+    slides: false,
+    video: false,
+    test: true,
+  },
+  {
+    id: 8,
+    title: "ASTRONOMICAL IMAGE PROCESSING",
+    theory: true,
+    slides: false,
+    video: false,
+    test: true,
+  },
+];
+
+export default lecturesConfig;

@@ -1,0 +1,25 @@
+?When and why was the UNIX operating system created?
++ 1969, to provide new computing tools and overcome frustrations with batch-mode computers
+- 1973, to replace Linux
+- 1983, to standardize commercial software
+- 1965, as part of the Multics project
+?Who were the main creators of UNIX?
++ Ken Thompson and Dennis Ritchie
+- Linus Torvalds and Richard Stallman
+- Bill Joy and Stephen Bourne
+- David Korn and Brian Kernighan
+?Which programming language was used to rewrite UNIX from assembly language?
++ C
+- PL/1
+- Fortran
+- Java
+?What are the three major components of the UNIX system?
++ Kernel, Shell, File system
+- Kernel, GUI, Command Prompt
+- Shell, BIOS, Network Stack
+- Kernel, Applications, Utilities
+?Which of the following statements about UNIX shells is correct?
++ The Bourne-Again shell (bash) is a free and widely used shell in Linux
+- The C shell (csh) is compatible with the Bourne shell
+- The Korn shell (ksh) cannot run Bourne shell scripts
+- UNIX systems only have one type of shell available

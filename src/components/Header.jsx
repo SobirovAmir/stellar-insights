@@ -8,7 +8,6 @@ const Header = () => {
   const navLinks = [
     { path: "/", label: "Home" },
     { path: "/materials", label: "Lectures" },
-    { path: "/tests", label: "Tests" },
     { path: "/resources", label: "Resources" },
   ];
 

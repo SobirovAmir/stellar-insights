@@ -1,0 +1,25 @@
+?What is the main purpose of preliminary analysis in astronomical images?
++ To examine, correct, and evaluate raw data for reliability before scientific interpretation
+- To publish images directly without processing
+- To increase the size of astronomical images
+- To generate random image noise
+?Which detectors are commonly used to capture astronomical images?
++ CCDs and CMOS sensors
+- Plasma monitors and CRT displays
+- Photographic film only
+- Infrared cameras exclusively
+?What is the formula for signal-to-noise ratio (SNR) in astronomical images?
++ SNR = S / √(S + N), where S is signal and N is noise
+- SNR = S * N, where S is signal and N is noise
+- SNR = S / N^2, where S is signal and N is noise
+- SNR = (S + N) / S, where S is signal and N is noise
+?Which software package is primarily used for reducing CCD images to pixel arrays for statistical analysis?
++ IRAF
+- CASA
+- STSDAS
+- Photoshop
+?What is the purpose of shape index profile analysis in preliminary astronomical image processing?
++ To measure local curvature and orientation for object classification
+- To apply color filters to the image
+- To convert images into 3D models for printing
+- To remove cosmic ray events

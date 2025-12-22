@@ -1,0 +1,25 @@
+?What is the main challenge of photometry in crowded stellar fields?
++ Overlapping stellar images leading to inaccurate flux measurements
+- Low signal-to-noise ratio in isolated stars
+- Atmospheric extinction of single stars
+- Detector dark current in empty regions
+?Which photometry method is preferred in dense fields?
++ PSF fitting photometry
+- Aperture photometry
+- Differential photometry
+- Spectrophotometry
+?What is the role of ALLSTAR in crowded field photometry?
++ Iteratively fits the PSF to stars and refines their magnitudes and positions
+- Generates synthetic star clusters for testing
+- Performs spectroscopy on stars
+- Detects cosmic rays and removes them only
+?What are the key requirements for PSF stars in ALLSTAR?
++ Isolated, unsaturated, evenly distributed, representative of image quality
+- Very bright, clustered, saturated stars
+- Only stars near the image center
+- Random faint stars without concern for isolation
+?Why is iterative fitting and subtraction important in ALLSTAR?
++ It uncovers faint stars hidden by brighter neighbors and improves completeness
+- It calibrates the telescope optics automatically
+- It converts CCD counts to absolute flux units
+- It filters out background galaxies exclusively

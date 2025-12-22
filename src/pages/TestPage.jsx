@@ -2,14 +2,14 @@ import { useState, useEffect } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import './TestPage.css';
 
-// Funksiya massivni aralashtirish uchun
+// Shuffle array
 const shuffleArray = (array) => array.sort(() => Math.random() - 0.5);
 
-// Test matnini parse qilish funksiyasi
+// Parse test file
 const parseTestFile = (text) => {
   return text
     .trim()
-    .split('\n?') // Savollarni bo'lish
+    .split('\n?') 
     .filter(Boolean)
     .map((block) => {
       const lines = block.split('\n');
@@ -27,35 +27,30 @@ const parseTestFile = (text) => {
     });
 };
 
-const TestsPage = () => {
-  const { lessonId } = useParams();
+const TestPage = () => {
+  const { lectureId } = useParams();
   const navigate = useNavigate();
   const [tests, setTests] = useState([]);
   const [loading, setLoading] = useState(true);
   const [results, setResults] = useState({ correct: 0, total: 0 });
   const [finished, setFinished] = useState(false);
 
-  // Dars raqamini olish
-  const number = lessonId.match(/\d+/)[0];
-
-  // Testlarni yuklash
   useEffect(() => {
     const fetchTests = async () => {
       try {
-        const response = await fetch(`/tests/${lessonId}.txt`);
+        const response = await fetch(`/tests/lecture${lectureId}.txt`);
+        if (!response.ok) throw new Error('Test file not found');
         const text = await response.text();
         setTests(shuffleArray(parseTestFile(text)));
       } catch (error) {
-        console.error('Testlarni yuklashda xatolik:', error);
+        console.error('Error loading test:', error);
       } finally {
         setLoading(false);
       }
     };
-
     fetchTests();
-  }, [lessonId]);
+  }, [lectureId]);
 
-  // Javobni tanlash funksiyasi
   const handleAnswer = (index, selectedOption) => {
     setTests((prevTests) =>
       prevTests.map((test, i) =>
@@ -64,10 +59,9 @@ const TestsPage = () => {
     );
   };
 
-  // Testni yakunlash funksiyasi
   const finishTest = () => {
     const correctAnswers = tests.filter((test) => {
-      const correctOption = test.options.find((option) => option.isCorrect);
+      const correctOption = test.options.find((o) => o.isCorrect);
       return correctOption?.text === test.selected;
     }).length;
 
@@ -76,25 +70,20 @@ const TestsPage = () => {
   };
 
   if (loading) {
-    return (
-      <div className="testspage-loader">
-        <p>Testlar yuklanmoqda...</p>
-      </div>
-    );
+    return <div className="testspage-loader">Loading...</div>;
   }
 
   if (finished) {
     const accuracy = Math.round((results.correct / results.total) * 100);
     return (
       <div className="testspage-results">
-        <h2>Test tugadi</h2>
+        <h2>Test Completed</h2>
         <p>
-          Siz <strong>{results.correct}</strong> ta savolga to&apos;g&apos;ri javob berdingiz 
-          (<strong>{results.total}</strong> ta savoldan).
+          You answered <strong>{results.correct}</strong> out of <strong>{results.total}</strong> questions correctly.
         </p>
-        <p>Aniq javoblar foizi: <strong>{accuracy}%</strong></p>
+        <p>Accuracy: <strong>{accuracy}%</strong></p>
         <button onClick={() => navigate(-1)} className="testspage-back-button">
-          Ortga qaytish
+          Back
         </button>
       </div>
     );
@@ -102,18 +91,18 @@ const TestsPage = () => {
 
   return (
     <div className="testspage">
-      <h1>{number}-Ma&apos;ruza uchun test</h1>
+      <h1>Lecture {lectureId} Test</h1>
       <button onClick={() => navigate(-1)} className="testspage-back-button">
-        Orqaga
+        Back
       </button>
       <div className="testspage-questions">
         {tests.map((test, index) => (
-          <div key={index} className="testspage-question">
+          <div key={index} className="testspage-question fade-in">
             <h3>{index + 1}. {test.question}</h3>
             <ul>
-              {test.options.map((option, optionIndex) => (
-                <li key={optionIndex}>
-                  <label>
+              {test.options.map((option, i) => (
+                <li key={i}>
+                  <label className={`option-label ${test.selected === option.text ? 'selected' : ''}`}>
                     <input
                       type="radio"
                       name={`question-${index}`}
@@ -130,10 +119,10 @@ const TestsPage = () => {
         ))}
       </div>
       <button onClick={finishTest} className="testspage-finish-button">
-        Testni yakunlash
+        Finish Test
       </button>
     </div>
   );
 };
 
-export default TestsPage;
+export default TestPage;

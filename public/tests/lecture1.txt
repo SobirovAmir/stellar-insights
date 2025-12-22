@@ -1,0 +1,25 @@
+?What is the primary purpose of astronomical image processing?
++ To enhance image quality and extract scientifically meaningful information
+- To take ordinary photographs of the sky
+- To simulate astronomical images in a computer
+- To replace telescopes with software
+?Which devices are commonly used to capture astronomical images?
++ CCD and CMOS sensors
+- DSLR cameras and webcams
+- Photographic film
+- Infrared thermometers
+?Which of the following is NOT considered a source of noise in astronomical images?
++ Ideal weather conditions
+- Photon (Shot) Noise
+- Readout Noise
+- Cosmic Rays
+?What is the purpose of calibration in astronomical image processing?
++ To remove systematic instrumental effects from raw images
+- To increase the brightness of images
+- To apply artistic filters to images
+- To convert images into black and white
+?Which techniques are commonly used for noise reduction in astronomical images?
++ Median filtering, Gaussian smoothing, Wavelet-based denoising, Adaptive filters
+- Histogram stretching, Logarithmic scaling
+- Color balancing and contrast adjustment
+- Only PSF fitting
