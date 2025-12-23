@@ -146,7 +146,7 @@ const Glossary = () => {
   return (
     <div className="glossary-container">
       <button className="back-button" onClick={() => navigate(-1)}>
-        &larr; Back
+       Back
       </button>
       <h1 className="glossary-title">Glossary</h1>
       <input

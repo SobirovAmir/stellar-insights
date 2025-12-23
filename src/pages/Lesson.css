@@ -29,16 +29,21 @@
 
 /* Кнопка назад */
 .back-button-lesson {
-  background-color: #4CAF50;
-  border: none;
   color: white;
-  padding: 12px 20px;
-  border-radius: 5px;
-  cursor: pointer;
   font-size: 16px;
   transition: background-color 0.3s;
   margin-bottom: 20px;
   font-family: 'Arial', sans-serif;
+
+  padding: 10px 22px;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+  color: #fff;
+  background: linear-gradient(135deg, #4f46e5, #6366f1);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.35);
+  transition: all 0.3s ease;
 }
 
 .back-button-lesson:hover {

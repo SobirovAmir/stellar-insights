@@ -61,22 +61,18 @@
 }
 
 .back-button {
-	background-color: #00aaff;
-	color: white;
-	border: 0;
-	padding: 12px 25px;
-	font-size: 1.2rem;
-	font-weight: bold;
-	border-radius: 5px;
+	padding: 10px 22px;
+	border-radius: 10px;
+	border: none;
 	cursor: pointer;
-	transition: background-color 0.3s ease-in-out;
-	margin-bottom: 30px;
-	margin-top: 50px;
+	font-size: 1rem;
+	color: #fff;
+	background: linear-gradient(135deg, #4f46e5, #6366f1);
+	box-shadow: 0 4px 15px rgba(0, 0, 0, 0.35);
+	transition: all 0.3s ease;
 	position: absolute;
-	left: 20px;
-	top: 20px;
-	align-self: flex-start;
-	border: 2px solid #00aaff;
+	left: 15px;
+	top: 15px;
 }
 
 .back-button:hover {

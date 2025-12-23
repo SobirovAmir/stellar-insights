@@ -46,7 +46,7 @@ const Lesson = () => {
         onClick={() => navigate(-1)}
         className="back-button-lesson"
       >
-        ← Back
+         Back
       </button>
 
       {loading && <div className="lesson-loader">Loading...</div>}

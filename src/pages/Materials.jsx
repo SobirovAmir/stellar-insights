@@ -38,9 +38,7 @@ const Materials = () => {
             >
               <h2>Lecture {lecture.id}</h2>
               <h3>{lecture.title}</h3>
-              <span className={`arrow ${activeId === lecture.id ? "open" : ""}`}>
-                ▾
-              </span>
+              <span className={`arrow ${activeId === lecture.id ? "open" : ""}`}></span>
             </div>
 
             {/* CONTENT */}
@@ -53,19 +51,29 @@ const Materials = () => {
                   <Link to={`/lecture/${lecture.id}`}>Theory</Link>
                 )}
 
+                {/* Показываем кнопку Presentations только если есть slides */}
                 {lecture.slides && (
                   <Link to={`/lecture/${lecture.id}/presentation`}>
-                    Slides
+                    Presentations
                   </Link>
                 )}
 
+                {!lecture.slides && lecture.references && lecture.references.length > 0 && (
+                  <Link to={`/lecture/${lecture.id}/presentation`}>
+                    Presentation
+                  </Link>
+                )}
+                {/* Видео */}
                 {lecture.video && (
                   <Link to={`/lecture/${lecture.id}/video`}>Video</Link>
                 )}
 
+                {/* Тест */}
                 {lecture.test && (
                   <Link to={`/lecture/${lecture.id}/test`}>Test</Link>
                 )}
+
+                {/* Если slides нет, но есть references — создаем отдельную ссылку на презентацию */}
               </div>
             </div>
           </div>

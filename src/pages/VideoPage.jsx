@@ -44,7 +44,7 @@ const VideoPage = () => {
       <button className="back-button" onClick={() => navigate(-1)}>
         {" "}
         {/* Back button */}
-        &larr; Back
+        Back
       </button>
       <div className="header-section">
         <h1 className="page-title">

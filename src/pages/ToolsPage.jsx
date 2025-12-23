@@ -25,12 +25,43 @@ const tools = [
   {
     title: "Aladin Sky Atlas",
     description: "Interactive portal to visualize astronomical images and overlay catalog data.",
-    url: "https://aladin.u‑strasbg.fr/"
+    url: "https://aladin.u-strasbg.fr/"
   },
   {
     title: "TOPCAT — Tabular Data Explorer",
     description: "Graphical tool for visualization and manipulation of astronomical tables including FITS catalogs.",
     url: "http://www.star.bris.ac.uk/~mbt/topcat/"
+  },
+  // Добавленные ресурсы
+  {
+    title: "Astro Club Presentations",
+    description: "Collection of astronomy presentations from Astro Club Augusta.",
+    url: "https://astroclubaugusta.weebly.com/presentations.html"
+  },
+  {
+    title: "Richard Cofer — Astro Club Member",
+    description: "Profile page of Richard Cofer.",
+    url: "https://astroclubaugusta.weebly.com/richard-cofer.html"
+  },
+  {
+    title: "Garret Cooler — Astro Club Member",
+    description: "Profile page of Garret Cooler.",
+    url: "https://astroclubaugusta.weebly.com/garret-cooler.html"
+  },
+  {
+    title: "Bruno Huguet — Astro Club Member",
+    description: "Profile page of Bruno Huguet.",
+    url: "https://astroclubaugusta.weebly.com/bruno-huguet.html"
+  },
+  {
+    title: "Neil Miller — Astro Club Member",
+    description: "Profile page of Neil Miller.",
+    url: "https://astroclubaugusta.weebly.com/neil-miller.html"
+  },
+  {
+    title: "Wade Bickford — Astro Club Member",
+    description: "Profile page of Wade Bickford.",
+    url: "https://astroclubaugusta.weebly.com/wade-bickford.html"
   }
 ];
 
@@ -40,7 +71,7 @@ const ToolsPage = () => {
   return (
     <div className="tools-container">
       <button className="back-button" onClick={() => navigate(-1)}>
-        &larr; Back
+      Back
       </button>
 
       <h1 className="page-title">Useful Tools & Resources for Astronomical Image Processing</h1>
