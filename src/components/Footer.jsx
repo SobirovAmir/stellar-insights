@@ -7,7 +7,7 @@ const Footer = () => {
   return (
     <footer className="bottom-footer">
       <p>Author: <strong>Zavkiddin Mirtoshev</strong></p>
-      <p>© {currentYear}. All right reserved.</p>
+      <p>© 2025. All right reserved.</p>
     </footer>
   );
 };
